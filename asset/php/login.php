@@ -1,7 +1,7 @@
 <?php 
 error_reporting(0);
 session_start();
-include '../narkoba/proses_login.php'; ?>
+include '../narkoba_git/proses_login.php'; ?>
 <div class="wrapper col0">
   <div id="topbar">
     <div id="slidepanel">

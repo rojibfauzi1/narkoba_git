@@ -1,6 +1,8 @@
 <?php 
+ob_start();
 error_reporting(0);
 session_start();
+require_once '../google_login/config.php';
 include '../proses_login.php'; 
 
 ?>

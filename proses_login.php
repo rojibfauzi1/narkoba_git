@@ -11,14 +11,7 @@ if(!empty($_POST['login'])){
   
 
 
- $email = $_POST['email'];
-  $pass3 = $_POST['password'];
 
-$s3 = "SELECT * FROM pelapor WHERE email='$email' and password='$pass3'";
-/*  print_r($s3);
-  die();*/
-  $sql3 = $conn->query($s3);
-$cek3 = $sql3->num_rows;
 
 
 
@@ -45,20 +38,6 @@ $cek3 = $sql3->num_rows;
     }
 
    
-  }elseif($cek3){
-    $row = $sql3->fetch_assoc();
-    if($sql3 > 0){
-      $_SESSION['login'] = 2;
-      $_SESSION['email'] = $email;
-      $_SESSION['password'] = $pass3;
-      $_SESSION['nama_siswa'] = $row['nama_siswa'];
-
-      
-
-        header("Refresh: 0; URL=admin/pelapor.php?p=dasboard_pelapor");
-       
-   
-    }
   }else{
       echo "
 <script>window.alert('gagal login username / password salah')</script>

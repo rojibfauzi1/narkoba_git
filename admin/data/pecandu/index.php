@@ -6,7 +6,7 @@
 
 	function statusnotif(){
       $.ajax({
-        url: 'http://localhost/Jfolder%20jitc/jitc4/narkoba/admin/data/pecandu/status_ajax.php', 
+        url: 'data/pecandu/status_ajax.php', 
         success: function(data){
           $('#status').html(data);
           timer = setTimeout('statusnotif()',4000);

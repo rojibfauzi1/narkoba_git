@@ -1,7 +1,10 @@
 <?php
-include 'header.php';
+ob_start();
+session_start();
 
+include 'header.php';
 /*include 'register.php';*/
+
 ?>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
@@ -14,6 +17,8 @@ include 'header.php';
 				<div class="row">
 					<div class="col-sm-6 col-md-6">
 					<p class="bold text-left">Monday - Saturday, 8am to 10pm </p>
+					<?php if($_SESSION['logged_in']) { ?>
+							<?php echo $_SESSION['nama_pelapor']; }?>
 					</div>
 					<div class="col-sm-6 col-md-6">
 					<p class="bold text-right">Call us now +62 008 65 001</p>

@@ -23,6 +23,7 @@ include 'conf/koneksi.php';
     <link href="asset/css/owl.theme.css" rel="stylesheet" media="screen" />
 	<link href="asset/css/animate.css" rel="stylesheet" />
     <link href="asset/css/style.css" rel="stylesheet">
+    <link href="google_login/css/login.css" rel="stylesheet">
 
 	<!-- boxed bg -->
 	<link id="bodybg" href="asset/bodybg/bg1.css" rel="stylesheet" type="text/css" />

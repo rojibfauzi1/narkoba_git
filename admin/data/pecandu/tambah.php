@@ -32,7 +32,7 @@ $sql1 = "SELECT max(no_rekam_medis) as id FROM pecandu";
   <input type="hidden" name="id_pelapor" value="<?php echo $id_pelapor ?>" />
   <input type="hidden" name="id" value="<?php echo $idBaru ?>" />
     <label for="id">No Rekam Medis</label>
-    <input type="text" required name="id_rekam" class="form-control"  value="<?php echo $idBaru1; ?>">
+    <input type="text" required name="id_rekam" readonly="" class="form-control"  value="<?php echo $idBaru1; ?>">
   </div>
 
   <div class="form-group">

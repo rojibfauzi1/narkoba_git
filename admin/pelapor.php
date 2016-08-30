@@ -1,8 +1,8 @@
 <?php  
-session_start();
 ob_start();
-
+session_start();
 require_once ('../conf/koneksi.php');
+/*require_once '../google_login/config.php';*/ 
 include 'asset/custom/php/head.php'; 
 
 
@@ -14,12 +14,16 @@ $login = $_SESSION['login1'];
 $status = $_SESSION['status'];
 $ktp = $_SESSION['no_ktp'];
 $hp = $_SESSION['no_hp'];
-
+/*$login1 = $_SESSION['nama_pelapor'];*/
 
 if($login != 'pelapor'){
   session_destroy();
   /*header("Refresh: 90; URL=login.php");*/
   header("location: ../index.php");
+}elseif(!isset($_SESSION['logged_in'])){
+  session_destroy();
+
+  header('Location: ../index.php');
 }
 ?>
 
@@ -40,6 +44,7 @@ if($login != 'pelapor'){
           <p><?php echo $username ?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
+
       </div>
       <!-- search form -->
      <!--  <form action="#" method="get" class="sidebar-form">
@@ -101,6 +106,9 @@ if($login != 'pelapor'){
  ?>
    <div class="content-wrapper">
        <section class="content">
+
+               <?php if($_SESSION['logged_in']) { ?>
+              <?php echo $_SESSION['name']; }?>
  <?php
       if(isset($_GET['p'])){
         switch ($_GET['p']) {
