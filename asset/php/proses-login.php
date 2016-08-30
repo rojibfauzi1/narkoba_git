@@ -113,8 +113,8 @@ $cek3 = $sql3->num_rows;
             <input type="password" class="form-control" name="password" placeholder="Password" required>
           </div>
         </div>
-         <a class="btn btn-default google" href="<?php echo $client->createAuthUrl();?>"> <i class="fa fa-google-plus modal-icons"></i> Sign In with Google+ </a>  
-        
+        <!--  <a class="btn btn-default google" href="<?php echo $client->createAuthUrl();?>"> <i class="fa fa-google-plus modal-icons"></i> Sign In with Google+ </a>  
+         -->
         <div class="modal-footer">
           <button type="reset" class="btn btn-danger">Reset</button>
           <input type="submit" class="btn btn-primary" name="masuk" value="login" />
